@@ -34,8 +34,6 @@ fun SimpleText(){
             style = TextStyle(
                 shadow = Shadow(color = Color.Black, blurRadius = 20f)
             ),
-
-
             )
     }
 }
