@@ -1,8 +1,10 @@
 package com.example.jetpackcomposecrashcourse.`3_CoreComponents`
 
-import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,10 +17,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.verticalScroll
 
 @Composable
 fun SimpleText(){
@@ -69,7 +72,7 @@ fun ColorFullText(){
 
 }
 
-@Composable
+/*@Composable
 fun ScrollableText(){
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -77,17 +80,38 @@ fun ScrollableText(){
     ){
         Text(
             text = "Hey this is Ranjeet kumar experiment with the jetpack compose".repeat(50),
-            maxLines = 2,
+            //text move
+//            modifier = Modifier.basicMarquee(),
+            maxLines = 1,
             fontSize = 50.sp,
             overflow = TextOverflow.Ellipsis
 
         )
     }
+}*/
+
+@Composable
+fun ScrollableTwoLineText() {
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "Hey this is Ranjeet kumar experiment with the jetpack compose ".repeat(50),
+            modifier = Modifier
+                .height(60.dp) // just enough for ~2 lines
+                .verticalScroll(rememberScrollState())
+                .padding(8.dp),
+            fontSize = 20.sp,
+            maxLines = Int.MAX_VALUE
+        )
+    }
 }
+
 
 
 @Preview(showSystemUi = true)
 @Composable
 fun textPreview(){
-    ScrollableText()
+    ScrollableTwoLineText()
 }

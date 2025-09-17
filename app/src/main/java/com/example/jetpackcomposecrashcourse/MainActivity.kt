@@ -6,6 +6,15 @@ import androidx.activity.compose.setContent
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessImageResources
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessStringResource
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.GreatingText
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.AnnotatedStringWithListeners
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.ColorFullText
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.FilledButtonSample
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.ImageShow
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.PartiallySelectlableText
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.PasswordTextFieldSample
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.ScrollableTwoLineText
+import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.SimpleText
+import com.example.jetpackcomposecrashcourse.`4_LayoutComposable`.columnExample
 import com.example.jetpackcomposecrashcourse.ui.theme.JetpackComposeCrashCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeCrashCourseTheme {
-                AccessImageResources()
+                columnExample()
             }
         }
     }
