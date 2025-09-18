@@ -15,6 +15,9 @@ import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.PasswordTextFiel
 import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.ScrollableTwoLineText
 import com.example.jetpackcomposecrashcourse.`3_CoreComponents`.SimpleText
 import com.example.jetpackcomposecrashcourse.`4_LayoutComposable`.columnExample
+import com.example.jetpackcomposecrashcourse.`5_BottomSheet`.PartialBottomSheet
+import com.example.jetpackcomposecrashcourse.`6_Cards`.ElevatedCardExample
+import com.example.jetpackcomposecrashcourse.`7_CheckBox`.CheckBoxExample
 import com.example.jetpackcomposecrashcourse.ui.theme.JetpackComposeCrashCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeCrashCourseTheme {
-                columnExample()
+                CheckBoxExample()
             }
         }
     }
