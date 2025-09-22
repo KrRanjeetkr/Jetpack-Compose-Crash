@@ -3,6 +3,7 @@ package com.example.jetpackcomposecrashcourse
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material3.InputChip
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessImageResources
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessStringResource
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.GreatingText
@@ -18,6 +19,7 @@ import com.example.jetpackcomposecrashcourse.`4_LayoutComposable`.columnExample
 import com.example.jetpackcomposecrashcourse.`5_BottomSheet`.PartialBottomSheet
 import com.example.jetpackcomposecrashcourse.`6_Cards`.ElevatedCardExample
 import com.example.jetpackcomposecrashcourse.`7_CheckBox`.CheckBoxExample
+import com.example.jetpackcomposecrashcourse.`8_InputChips`.inputChipExample
 import com.example.jetpackcomposecrashcourse.ui.theme.JetpackComposeCrashCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +27,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeCrashCourseTheme {
-                CheckBoxExample()
+                inputChipExample()
             }
         }
     }
