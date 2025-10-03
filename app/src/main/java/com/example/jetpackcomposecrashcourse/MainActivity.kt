@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.InputChip
+import com.example.jetpackcomposecrashcourse.`11_Menus`.DropdownExample
+import com.example.jetpackcomposecrashcourse.`12_scaffold`.ScaffoldExample
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessImageResources
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.AccessStringResource
 import com.example.jetpackcomposecrashcourse.`2_Fundamental_Concepts`.GreatingText
@@ -27,7 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeCrashCourseTheme {
-                inputChipExample()
+                ScaffoldExample()
             }
         }
     }
