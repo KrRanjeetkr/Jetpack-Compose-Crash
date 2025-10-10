@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.0.0"
 }
 
 android {
@@ -59,5 +60,15 @@ dependencies {
 
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
+
+    //navigation
+    val nav_version = "2.9.5"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+    //custom bottom nev bar
+    implementation("com.canopas.compose-animated-navigationbar:bottombar:1.0.1")
 
 }
